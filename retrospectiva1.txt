@@ -1,0 +1,25 @@
+1.¿Cuáles fueron los mini-ciclos definidos? Justifíquenlos.
+Definimos tres mini-ciclos principales para aislar la complejidad:
+Mini-ciclo 1 (Lógica de estructuras): Implementación de las listas de ruedas y el catálogo de símbolos, junto con la regla de negocio de índices iniciando en 1.  
+Mini-ciclo 2 (Control y Consultas): Desarrollo de los métodos de giro (spin), validación del estado ganador (isjackpot) y retorno de arreglos de configuración.  
+Mini-ciclo 3 (Integración Gráfica): Conexión de la lógica con el paquete shapes mediante la clase interna WheelObject y el manejo de visibilidad con makeVisible().  
+Justificación: Separar la lógica abstracta de la representación gráfica nos permitió asegurar que las reglas del juego funcionaran por consola antes de enfrentarnos a los retos visuales de la interfaz.
+2.¿Cuál es el estado actual del proyecto en términos de mini-ciclos? ¿por qué?
+El proyecto se encuentra con el 100% de los mini-ciclos completados para este primer ciclo de desarrollo. La simulación visual es completamente funcional, maneja correctamente las posiciones, valida el estado ganador y cumple con todos los requisitos de diseño estipulados en el documento base.
+3.¿Cuál fue el tiempo total invertido por cada uno de ustedes? (Horas/Hombre)
+Jerónimo Quilaguy/11 horas Juan Roa/11 horas
+4.¿Cuál consideran fue el mayor logro? ¿Por qué?
+Nuestro mayor logro fue el correcto encapsulamiento de la interfaz gráfica creando la clase interna WheelObject. Esto permitió que la clase principal SlotMachine se mantuviera limpia y centrada en orquestar el simulador, delegando toda la complejidad de calcular coordenadas y colores a cada rueda individual de forma independiente.
+5.¿Cuál consideran que fue el mayor problema técnico? ¿Qué hicieron para resolverlo?
+El mayor reto técnico fue la superposición de capas (Z-index) y el desfase en las coordenadas al usar los métodos de movimiento relativo (moveHorizontal) de las figuras de shapes. Los círculos se separaban de los rectángulos al agregar ruedas y los rectángulos tapaban los símbolos al repintarse.
+Solución: Implementamos variables de estado para guardar la posición absoluta en X (currentBgX, currentSymX) y calculamos la distancia exacta antes de mover la figura. Además, reordenamos los llamados gráficos para asegurar que el Circle siempre se dibuje después del Rectangle.
+6.¿Qué hicieron bien como equipo? ¿Qué se comprometen a hacer para mejorar los resultados?
+Hicimos una excelente división en la etapa de modelado UML en Astah para comprender el problema antes de programar. Para el próximo ciclo nos comprometemos a gestionar mejor el tiempo de integración final, realizando pruebas conjuntas de código de forma más temprana para no depender de la fecha límite para ensamblar las partes.
+7.Considerando las prácticas XP incluidas en los laboratorios. ¿cuál fue la más útil? ¿por qué?
+La práctica del Diseño Simple (Simple Design) combinada con Programación en Parejas (Pair Programming) fue fundamental. Al sentarnos juntos a analizar el problema de las coordenadas visuales, logramos refactorizar la lógica hacia un diseño más simple en lugar de escribir funciones complejas para predecir el comportamiento del Canvas.
+8. ¿Qué referencias usaron? ¿Cuál fue la más útil? Incluyan citas con estándares adecuados.
+Oracle. (2026). Java Platform, Standard Edition Documentation. Recuperado de https://docs.oracle.com/en/java/
+
+Barnes, D. J., & Kölling, M. (2000). Objects First with Java: A Practical Introduction using BlueJ (Reference for the shapes package architecture).
+
+La más útil: La documentación oficial de Java (Oracle), específicamente para entender el comportamiento dinámico de los ArrayList y el manejo de estructuras condicionales para iterar sobre los objetos gráficos.
