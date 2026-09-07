@@ -1,0 +1,21 @@
+#BlueJ class context
+#Sun Sep 06 20:58:52 COT 2026
+comment0.target=SlotMachineC2Test
+comment0.text=\r\n Pruebas del Ciclo 2 de SlotMachine.\r\n\r\n Todas las pruebas se realizan con la maquina invisible.\r\n
+comment1.target=void accordingJqShouldSwapWheels()
+comment1.text=\r\n Prueba que swap intercambia correctamente dos ruedas.\r\n
+comment2.target=void accordingJqShouldNotSpinLockedWheel()
+comment2.text=\r\n Prueba que una rueda fijada no puede girar.\r\n
+comment3.target=void accordingJqShouldUnlockWheel()
+comment3.text=\r\n Prueba que una rueda desbloqueada vuelve a poder modificarse.\r\n
+comment4.target=void accordingJqShouldSpinBySteps()
+comment4.text=\r\n Prueba el giro por una cantidad determinada de pasos.\r\n
+comment5.target=void accordingJqShouldNotSpinNegativeSteps()
+comment5.text=\r\n Prueba que spin por pasos no acepta pasos negativos.\r\n
+comment6.target=void accordingJqShouldSetConfiguration()
+comment6.text=\r\n Prueba la configuracion forzada.\r\n
+comment7.target=void accordingJqShouldRejectInvalidWheelPosition()
+comment7.text=\r\n Prueba que una posicion fuera de rango produzca error.\r\n
+comment8.target=void accordingJqShouldRejectInvalidSymbolConfiguration()
+comment8.text=\r\n Prueba que una configuracion con un simbolo inexistente sea rechazada.\r\n
+numComments=9

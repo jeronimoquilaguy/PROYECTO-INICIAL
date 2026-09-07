@@ -1,0 +1,9 @@
+#BlueJ class context
+#Sun Sep 06 21:02:00 COT 2026
+comment0.target=SlotMachineCC2Test
+comment0.text=\r\n Pruebas colectivas del Ciclo 2.\r\n
+comment1.target=void accordingJqShouldKeepLockedWheel()
+comment1.text=\r\n Verifica que una rueda fijada conserve su simbolo\r\n mientras otra rueda puede cambiar.\r\n
+comment2.target=void accordingJqShouldSwapWheelStates()
+comment2.text=\r\n Verifica que swap tambien conserve el estado de fijacion.\r\n
+numComments=3

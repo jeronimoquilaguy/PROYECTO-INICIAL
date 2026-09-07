@@ -1,0 +1,23 @@
+#BlueJ class context
+#Sun Sep 06 20:55:09 COT 2026
+comment0.target=Rueda
+comment0.text=\r\n Representa una rueda individual de la maquina tragamonedas.\r\n Cada rueda tiene un fondo (un Rectangle) y un simbolo (un Circle).\r\n\r\n Jeronimo Quilaguy - Juan Roa\r\n version 1\r\n
+comment1.params=color
+comment1.target=Rueda(java.lang.String)
+comment1.text=\r\n Crea una rueda nueva con un color inicial.\r\n @param color el color inicial del simbolo\r\n
+comment2.params=x
+comment2.target=void moverA(int)
+comment2.text=\r\n Mueve la rueda hasta una posicion horizontal del lienzo.\r\n @param x la posicion en x a la que se debe mover la rueda\r\n
+comment3.params=color
+comment3.target=void cambiarColor(java.lang.String)
+comment3.text=\r\n Cambia el color del simbolo de la rueda.\r\n @param color el nuevo color\r\n
+comment4.target=java.lang.String obtenerColor()
+comment4.text=\r\n Retorna el color actual del simbolo de la rueda.\r\n @return el color actual\r\n
+comment5.params=color
+comment5.target=void cambiarFondo(java.lang.String)
+comment5.text=\r\n Cambia el color de fondo de la rueda.\r\n @param color el nuevo color de fondo\r\n
+comment6.target=void hacerVisible()
+comment6.text=\r\n Hace visible la rueda en el lienzo.\r\n
+comment7.target=void hacerInvisible()
+comment7.text=\r\n Hace invisible la rueda en el lienzo.\r\n
+numComments=8
