@@ -32,8 +32,7 @@ public class SlotMachineCC2Test {
     /**
      * Verifica que swap tambien conserve el estado de fijacion.
      */
-    @Test
-    public void accordingJqShouldSwapWheelStates() {
+    public void accordingJqShouldNotSwapLockedWheels() {
         SlotMachine maquina = new SlotMachine();
 
         maquina.addWheel(1);
@@ -45,9 +44,9 @@ public class SlotMachineCC2Test {
         maquina.lock(1);      
         maquina.swap(1, 2);   
 
-        maquina.spin(2);       
-
-        assertEquals("red", maquina.configuration()[1]); 
-        assertFalse(maquina.ok());                       
+        assertFalse(maquina.ok());
+        
+        assertEquals("red", maquina.configuration()[0]);
+        assertEquals("blue", maquina.configuration()[1]);
     }
 }

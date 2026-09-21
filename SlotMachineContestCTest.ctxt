@@ -1,0 +1,11 @@
+#BlueJ class context
+#Sun Sep 20 20:16:08 COT 2026
+comment0.target=SlotMachineContestCTest
+comment0.text=\r\n Pruebas compartidas del concurso de SlotMachine.\r\n
+comment1.target=void shouldSolveThreeWheels()
+comment1.text=\r\n Verifica de forma compartida que la solucion para tres ruedas\r\n genere una secuencia valida de acciones dentro del limite permitido.\r\n
+comment2.target=void shouldSolveFourWheels()
+comment2.text=\r\n Verifica de forma compartida que la solucion para cuatro ruedas\r\n genere una secuencia valida de acciones dentro del limite permitido.\r\n
+comment3.target=void shouldSolveFiveWheels()
+comment3.text=\r\n Verifica de forma compartida que la solucion para cinco ruedas\r\n genere una secuencia valida de acciones dentro del limite permitido.\r\n
+numComments=4

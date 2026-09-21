@@ -1,0 +1,14 @@
+#BlueJ class context
+#Sun Sep 20 20:16:08 COT 2026
+comment0.target=SlotMachineContest
+comment0.text=\r\n Resuelve el problema de la maraton de Slot Machine.\r\n
+comment1.params=n
+comment1.target=int[][] solve(int)
+comment1.text=\r\n Resuelve el problema de la maquina tragamonedas de manera invisible.\r\n\r\n @param n numero de ruedas de la maquina.\r\n @return secuencia de acciones, donde cada accion contiene la rueda\r\n         y la cantidad de pasos que debe girar.\r\n
+comment2.params=n
+comment2.target=void simulate(int)
+comment2.text=\r\n Simula visualmente la solucion del problema de la maquina tragamonedas.\r\n\r\n @param n numero de ruedas de la maquina.\r\n
+comment3.params=maquina n
+comment3.target=int[][] resolver(SlotMachine, int)
+comment3.text=\r\n Calcula la secuencia de acciones necesaria para resolver la maquina.\r\n\r\n @param maquina maquina tragamonedas que se utiliza como herramienta.\r\n @param n numero de ruedas de la maquina.\r\n @return lista de acciones necesarias para obtener una configuracion ganadora.\r\n
+numComments=4

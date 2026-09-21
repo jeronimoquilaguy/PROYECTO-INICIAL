@@ -37,6 +37,47 @@ public class SlotMachine  {
         catalogoSimbolos.add("blue");
         catalogoSimbolos.add("green");
     }
+    
+    /**
+     * Crea una maquina con n ruedas y n simbolos, todo inicializado al azar.
+     * @param n la cantidad de ruedas y de simbolos que va a tener la maquina
+     */
+    public SlotMachine(int n) {
+        visible = false;
+        bandera = true;
+        ruedas = new ArrayList<>();
+        catalogoSimbolos = new ArrayList<>();
+        fijadas = new ArrayList<>();
+
+        if (n < 1) {
+            n = 1;
+        }
+
+        String[] coloresBase = {
+            "red", "blue", "green", "yellow", "orange",
+            "cyan", "magenta", "pink", "black", "gray"
+        };
+
+        for (int i = 0; i < n; i++) {
+            String color;
+            if (i < coloresBase.length) {
+                color = coloresBase[i];
+            } else {
+                color = "color" + i;
+            }
+            catalogoSimbolos.add(color);
+        }
+
+        for (int i = 0; i < n; i++) {
+            int indiceAlAzar = (int) (Math.random() * catalogoSimbolos.size());
+            String colorAlAzar = catalogoSimbolos.get(indiceAlAzar);
+            Rueda ruedaNueva = new Rueda(colorAlAzar);
+            ruedas.add(ruedaNueva);
+            fijadas.add(false);
+        }
+
+        acomodarRuedas();
+    }
 
     /**
      * Agrega una rueda en la posicion indicada.
@@ -81,8 +122,8 @@ public class SlotMachine  {
 
     acomodarRuedas();
     bandera = true;
-}
-    
+    }
+
        /**
      * Intercambia la posicion de dos ruedas.
      * @param wheel1 posicion de la primera rueda
@@ -93,6 +134,10 @@ public class SlotMachine  {
         mostrarError("No hay ruedas para intercambiar.");
         return;
     }
+     if (!posicionValida(wheel1, ruedas.size()) || !posicionValida(wheel2, ruedas.size())) {
+            mostrarError("Las posiciones de las ruedas no son validas.");
+            return;
+        }
 
     int indice1 = ajustarIndice(wheel1, ruedas.size());
     int indice2 = ajustarIndice(wheel2, ruedas.size());
@@ -101,6 +146,10 @@ public class SlotMachine  {
         mostrarError("No se pueden intercambiar la misma rueda.");
         return;
     }
+    if (fijadas.get(indice1) || fijadas.get(indice2)) {
+            mostrarError("No se pueden intercambiar ruedas fijadas.");
+            return;
+        }
 
     Rueda ruedaTemporal = ruedas.get(indice1);
     ruedas.set(indice1, ruedas.get(indice2));
@@ -111,7 +160,7 @@ public class SlotMachine  {
 
     acomodarRuedas();
     bandera = true;
-}
+    }
     
         /**
      * Fija una rueda para que no pueda girar ni cambiar de simbolo.

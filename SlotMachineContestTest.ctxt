@@ -1,0 +1,12 @@
+#BlueJ class context
+#Sun Sep 20 20:16:08 COT 2026
+comment0.target=SlotMachineContestTest
+comment1.target=void shouldSolveThreeWheels()
+comment1.text=\r\n Verifica que la solucion para una maquina de tres ruedas\r\n genere una secuencia valida de acciones.\r\n
+comment2.target=void shouldSimulateThreeWheels()
+comment2.text=\r\n Verifica que la simulacion de una maquina de tres ruedas\r\n pueda ejecutarse correctamente.\r\n
+comment3.target=void shouldSolveFourWheels()
+comment3.text=\r\n Verifica que la solucion para una maquina de cuatro ruedas\r\n genere una secuencia valida de acciones.\r\n
+comment4.target=void shouldSimulateFourWheels()
+comment4.text=\r\n Verifica que la simulacion de una maquina de cuatro ruedas\r\n pueda ejecutarse correctamente.\r\n
+numComments=5
