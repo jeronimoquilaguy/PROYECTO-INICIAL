@@ -1,0 +1,68 @@
+1.¿Cuáles fueron los mini-ciclos definidos? Justifíquenlos.
+Definimos tres mini-ciclos principales para aislar la complejidad:
+Mini-ciclo 1 (Lógica de estructuras): Implementación de las listas de ruedas y el catálogo de símbolos, junto con la regla de negocio de índices iniciando en 1.  
+Mini-ciclo 2 (Control y Consultas): Desarrollo de los métodos de giro (spin), validación del estado ganador (isjackpot) y retorno de arreglos de configuración.  
+Mini-ciclo 3 (Integración Gráfica): Conexión de la lógica con el paquete shapes mediante la clase interna WheelObject y el manejo de visibilidad con makeVisible().  
+Justificación: Separar la lógica abstracta de la representación gráfica nos permitió asegurar que las reglas del juego funcionaran por consola antes de enfrentarnos a los retos visuales de la interfaz.
+2.¿Cuál es el estado actual del proyecto en términos de mini-ciclos? ¿por qué?
+El proyecto se encuentra con el 100% de los mini-ciclos completados para este primer ciclo de desarrollo. La simulación visual es completamente funcional, maneja correctamente las posiciones, valida el estado ganador y cumple con todos los requisitos de diseño estipulados en el documento base.
+3.¿Cuál fue el tiempo total invertido por cada uno de ustedes? (Horas/Hombre)
+Jerónimo Quilaguy/11 horas Juan Roa/11 horas
+4.¿Cuál consideran fue el mayor logro? ¿Por qué?
+Nuestro mayor logro fue el correcto encapsulamiento de la interfaz gráfica creando la clase interna WheelObject. Esto permitió que la clase principal SlotMachine se mantuviera limpia y centrada en orquestar el simulador, delegando toda la complejidad de calcular coordenadas y colores a cada rueda individual de forma independiente.
+5.¿Cuál consideran que fue el mayor problema técnico? ¿Qué hicieron para resolverlo?
+El mayor reto técnico fue la superposición de capas (Z-index) y el desfase en las coordenadas al usar los métodos de movimiento relativo (moveHorizontal) de las figuras de shapes. Los círculos se separaban de los rectángulos al agregar ruedas y los rectángulos tapaban los símbolos al repintarse.
+Solución: Implementamos variables de estado para guardar la posición absoluta en X (currentBgX, currentSymX) y calculamos la distancia exacta antes de mover la figura. Además, reordenamos los llamados gráficos para asegurar que el Circle siempre se dibuje después del Rectangle.
+6.¿Qué hicieron bien como equipo? ¿Qué se comprometen a hacer para mejorar los resultados?
+Hicimos una excelente división en la etapa de modelado UML en Astah para comprender el problema antes de programar. Para el próximo ciclo nos comprometemos a gestionar mejor el tiempo de integración final, realizando pruebas conjuntas de código de forma más temprana para no depender de la fecha límite para ensamblar las partes.
+7.Considerando las prácticas XP incluidas en los laboratorios. ¿cuál fue la más útil? ¿por qué?
+La práctica del Diseño Simple (Simple Design) combinada con Programación en Parejas (Pair Programming) fue fundamental. Al sentarnos juntos a analizar el problema de las coordenadas visuales, logramos refactorizar la lógica hacia un diseño más simple en lugar de escribir funciones complejas para predecir el comportamiento del Canvas.
+8. ¿Qué referencias usaron? ¿Cuál fue la más útil? Incluyan citas con estándares adecuados.
+Oracle. (2026). Java Platform, Standard Edition Documentation. Recuperado de https://docs.oracle.com/en/java/
+
+Barnes, D. J., & Kölling, M. (2000). Objects First with Java: A Practical Introduction using BlueJ (Reference for the shapes package architecture).
+
+La más útil: La documentación oficial de Java (Oracle), específicamente para entender el comportamiento dinámico de los ArrayList y el manejo de estructuras condicionales para iterar sobre los objetos gráficos.
+
+1. ¿Cuáles fueron los mini-ciclos definidos? Justifíquenlos.
+Definimos tres mini-ciclos principales para organizar el desarrollo de la extensión del proyecto y reducir la complejidad:
+
+Mini-ciclo 1 (Extensión de SlotMachine): Implementación del constructor SlotMachine(int n), encargado de crear una máquina con n ruedas y un catálogo de símbolos, además de adaptar los métodos existentes para soportar la nueva funcionalidad requerida.
+
+Mini-ciclo 2 (Resolución del problema): Desarrollo de la clase SlotMachineContest y del método solve(int n), implementando el algoritmo para encontrar la secuencia de giros necesaria para obtener una configuración ganadora utilizando únicamente las operaciones permitidas de SlotMachine.
+
+Mini-ciclo 3 (Simulación y pruebas): Implementación de simulate(int n), pruebas unitarias, pruebas compartidas y pruebas de aceptación para verificar que la solución funciona con diferentes cantidades de ruedas y que la simulación termina con todas las ruedas mostrando el mismo símbolo.
+
+Justificación: Separar estos mini-ciclos permitió desarrollar primero la herramienta de simulación, después implementar la solución algorítmica de manera independiente y finalmente comprobar su funcionamiento mediante pruebas automatizadas y simulaciones visuales.
+
+2. ¿Cuál es el estado actual del proyecto en términos de mini-ciclos? ¿Por qué?
+El proyecto se encuentra con los tres mini-ciclos completados. La clase SlotMachine cuenta con el nuevo constructor para crear máquinas con varias ruedas, la clase SlotMachineContest resuelve el problema mediante una secuencia de acciones y la simulación permite observar visualmente el proceso. Además, se realizaron pruebas con 3, 4 y 5 ruedas, junto con pruebas unitarias, compartidas y de aceptación, obteniendo resultados satisfactorios.
+
+3. ¿Cuál fue el tiempo total invertido por cada uno de ustedes? (Horas/Hombre)
+Jerónimo Quilaguy / 11 horas
+Juan Roa / 11 horas
+
+4. ¿Cuál consideran fue el mayor logro? ¿Por qué?
+Nuestro mayor logro fue implementar la solución del problema de la maratón separando completamente la lógica del solucionador de la clase SlotMachine. La clase SlotMachineContest utiliza la máquina únicamente como herramienta de prueba, mediante las operaciones permitidas, mientras que el algoritmo determina por separado las acciones necesarias para conseguir una configuración ganadora. Esto permitió mantener una separación clara de responsabilidades y comprobar la solución mediante simulaciones y pruebas automatizadas.
+
+5. ¿Cuál consideran que fue el mayor problema técnico? ¿Qué hicieron para resolverlo?
+El mayor problema técnico fue implementar correctamente el algoritmo de resolución utilizando únicamente la información proporcionada por distinctSymbols() y los giros realizados mediante spin(). Fue necesario determinar posiciones de referencia y comparar los resultados obtenidos al cambiar la posición de una rueda, además de manejar correctamente los giros positivos y negativos.
+
+Solución: Implementamos un proceso de escaneo de las ruedas para identificar posiciones relevantes, registramos las acciones realizadas y utilizamos esas posiciones para determinar cómo debía girarse cada rueda. Posteriormente verificamos el funcionamiento mediante simulate() y diferentes pruebas con máquinas de 3, 4 y 5 ruedas.
+
+6. ¿Qué hicieron bien como equipo? ¿Qué se comprometen a hacer para mejorar los resultados?
+Trabajamos de manera conjunta en la comprensión del problema, la implementación del algoritmo y la verificación mediante pruebas. También dividimos las tareas de desarrollo y realizamos pruebas frecuentes para detectar errores en la interacción entre SlotMachine y SlotMachineContest.
+
+Para el próximo ciclo nos comprometemos a organizar desde el inicio las pruebas que se deben realizar y a realizar la integración de las diferentes partes con mayor anticipación, con el objetivo de contar con más tiempo para revisar y corregir detalles antes de la entrega.
+
+7. Considerando las prácticas XP incluidas en los laboratorios, ¿cuál fue la más útil? ¿Por qué?
+La práctica de Programación en Parejas (Pair Programming) fue especialmente útil durante este ciclo. Trabajar conjuntamente permitió analizar el algoritmo, detectar errores en la secuencia de movimientos y comprobar rápidamente los resultados de las simulaciones. También facilitó la revisión del código y permitió discutir las decisiones de diseño antes de realizar cambios.
+
+8. ¿Qué referencias usaron? ¿Cuál fue la más útil? Incluyan citas con estándares adecuados.
+Oracle. (2026). Java Platform, Standard Edition Documentation. Recuperado de https://docs.oracle.com/en/java/
+
+International Collegiate Programming Contest. (2025). ICPC World Finals 2025 – Problem I: Slot Machine.
+
+Barnes, D. J., & Kölling, M. (2000). Objects First with Java: A Practical Introduction using BlueJ.
+
+La referencia más útil para este ciclo fue el enunciado oficial del problema de Slot Machine, ya que permitió comprender las restricciones, las operaciones permitidas y el objetivo que debía cumplir el algoritmo. La documentación oficial de Java también fue útil para trabajar con ArrayList, arreglos y estructuras de control utilizadas durante la implementación.
