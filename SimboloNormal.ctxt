@@ -1,0 +1,16 @@
+#BlueJ class context
+#Sun Oct 04 18:26:53 COT 2026
+comment0.target=SimboloNormal
+comment0.text=\r\n Representa un simbolo normal.\r\n\r\n Un simbolo normal no tiene un comportamiento\r\n especial cuando es seleccionado.\r\n
+comment1.params=color
+comment1.target=SimboloNormal(java.lang.String)
+comment1.text=\r\n Crea un simbolo normal con un color.\r\n\r\n @param color color inicial del simbolo\r\n
+comment2.target=void seleccionado()
+comment2.text=\r\n No realiza ninguna accion especial al ser seleccionado.\r\n
+comment3.target=int obtenerTama\u00F1o()
+comment3.text=\r\n Devuelve el tama\u00F1o normal del simbolo.\r\n\r\n @return 20\r\n
+comment4.target=boolean estaVisible()
+comment4.text=\r\n Indica que el simbolo normal siempre es visible.\r\n\r\n @return true\r\n
+comment5.target=java.lang.String obtenerTipo()
+comment5.text=\r\n Devuelve el tipo del simbolo.\r\n\r\n @return "normal"\r\n
+numComments=6

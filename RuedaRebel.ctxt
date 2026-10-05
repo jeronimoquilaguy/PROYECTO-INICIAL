@@ -1,0 +1,16 @@
+#BlueJ class context
+#Sun Oct 04 18:06:47 COT 2026
+comment0.target=RuedaRebel
+comment0.text=\r\n Representa una rueda Rebel.\r\n\r\n Una rueda Rebel no puede bloquearse,\r\n intercambiarse ni eliminarse.\r\n
+comment1.params=color
+comment1.target=RuedaRebel(java.lang.String)
+comment1.text=\r\n Crea una rueda Rebel con un color.\r\n\r\n @param color color inicial de la rueda\r\n
+comment2.target=boolean puedeBloquear()
+comment2.text=\r\n Una rueda Rebel no se puede bloquear.\r\n\r\n @return false porque una Rebel no puede bloquearse\r\n
+comment3.target=boolean puedeIntercambiar()
+comment3.text=\r\n Una rueda Rebel no se puede intercambiar.\r\n\r\n @return false porque una Rebel no puede intercambiarse\r\n
+comment4.target=boolean puedeEliminar()
+comment4.text=\r\n Una rueda Rebel no se puede eliminar.\r\n\r\n @return false porque una Rebel no puede eliminarse\r\n
+comment5.target=void mostrarTipo()
+comment5.text=\r\n Muestra visualmente que la rueda es Rebel.\r\n
+numComments=6

@@ -1,0 +1,15 @@
+#BlueJ class context
+#Sun Oct 04 19:05:13 COT 2026
+comment0.target=SlotMachineC4Test
+comment0.text=\r\n Pruebas unitarias del Ciclo 4 de SlotMachine.\r\n
+comment1.target=void testRebelNoSePuedeEliminar()
+comment1.text=\r\n Comprueba que una rueda Rebel no puede eliminarse.\r\n
+comment2.target=void testRebelNoSePuedeBloquear()
+comment2.text=\r\n Comprueba que una rueda Rebel no puede bloquearse.\r\n
+comment3.target=void testLeftyCopiaLaRuedaIzquierda()
+comment3.text=\r\n Comprueba que una rueda Lefty copia el color\r\n de la rueda que esta a su izquierda.\r\n
+comment4.target=void testEphemeralDisminuye()
+comment4.text=\r\n Comprueba que un simbolo Ephemeral disminuye\r\n su tama\u00F1o cuando es seleccionado.\r\n
+comment5.target=void testShyCambiaVisibilidad()
+comment5.text=\r\n Comprueba que un simbolo Shy cambia\r\n su visibilidad cuando es seleccionado.\r\n
+numComments=6

@@ -1,0 +1,13 @@
+#BlueJ class context
+#Sun Oct 04 18:07:39 COT 2026
+comment0.target=RuedaLefty
+comment0.text=\r\n Representa una rueda Lefty.\r\n\r\n Una rueda Lefty puede copiar el estado\r\n de la rueda que tiene a su izquierda.\r\n
+comment1.params=color
+comment1.target=RuedaLefty(java.lang.String)
+comment1.text=\r\n Crea una rueda Lefty con un color.\r\n\r\n @param color color inicial de la rueda\r\n
+comment2.params=izquierda
+comment2.target=void copiarEstado(Rueda)
+comment2.text=\r\n Copia el color de la rueda que esta a la izquierda.\r\n\r\n @param izquierda rueda que esta a la izquierda\r\n
+comment3.target=void mostrarTipo()
+comment3.text=\r\n Muestra visualmente que la rueda es Lefty.\r\n
+numComments=4

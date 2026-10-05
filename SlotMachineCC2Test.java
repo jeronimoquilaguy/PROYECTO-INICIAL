@@ -30,8 +30,9 @@ public class SlotMachineCC2Test {
     }
 
     /**
-     * Verifica que swap tambien conserve el estado de fijacion.
+     * Verifica que swap no permita intercambiar ruedas fijadas.
      */
+    @Test
     public void accordingJqShouldNotSwapLockedWheels() {
         SlotMachine maquina = new SlotMachine();
 

@@ -15,8 +15,8 @@ public class SlotMachineC2Test {
     public void accordingJqShouldSwapWheels() {
         SlotMachine maquina = new SlotMachine();
 
-        maquina.addWheel(1);
-        maquina.addWheel(2);
+        maquina.addWheel("normal",1);
+        maquina.addWheel("normal",2);
 
         maquina.placeSymbol(1, "red");
         maquina.placeSymbol(2, "blue");
@@ -35,7 +35,7 @@ public class SlotMachineC2Test {
     public void accordingJqShouldNotSpinLockedWheel() {
         SlotMachine maquina = new SlotMachine();
 
-        maquina.addWheel(1);
+        maquina.addWheel("normal",1);
         maquina.placeSymbol(1, "red");
 
         maquina.lock(1);
@@ -52,7 +52,7 @@ public class SlotMachineC2Test {
     public void accordingJqShouldUnlockWheel() {
         SlotMachine maquina = new SlotMachine();
 
-        maquina.addWheel(1);
+        maquina.addWheel("normal",1);
         maquina.placeSymbol(1, "red");
 
         maquina.lock(1);
@@ -70,7 +70,7 @@ public class SlotMachineC2Test {
     public void accordingJqShouldSpinBySteps() {
         SlotMachine maquina = new SlotMachine();
 
-        maquina.addWheel(1);
+        maquina.addWheel("normal",1);
         maquina.placeSymbol(1, "red");
 
         maquina.spin(1, 1);
@@ -86,7 +86,7 @@ public class SlotMachineC2Test {
     public void accordingJqShouldNotSpinNegativeSteps() {
         SlotMachine maquina = new SlotMachine();
 
-        maquina.addWheel(1);
+        maquina.addWheel("normal",1);
         maquina.placeSymbol(1, "red");
 
         maquina.spin(1, -1);
@@ -102,9 +102,9 @@ public class SlotMachineC2Test {
     public void accordingJqShouldSetConfiguration() {
         SlotMachine maquina = new SlotMachine();
 
-        maquina.addWheel(1);
-        maquina.addWheel(2);
-        maquina.addWheel(3);
+        maquina.addWheel("normal",1);
+        maquina.addWheel("normal",2);
+        maquina.addWheel("normal",3);
 
         String[] configuracion = {"red", "blue", "green"};
 
@@ -125,7 +125,7 @@ public class SlotMachineC2Test {
     public void accordingJqShouldRejectInvalidWheelPosition() {
         SlotMachine maquina = new SlotMachine();
 
-        maquina.addWheel(1);
+        maquina.addWheel("normal",1);
 
         maquina.spin(2);
 
@@ -139,8 +139,8 @@ public class SlotMachineC2Test {
     public void accordingJqShouldRejectInvalidSymbolConfiguration() {
         SlotMachine maquina = new SlotMachine();
 
-        maquina.addWheel(1);
-        maquina.addWheel(2);
+        maquina.addWheel("normal",1);
+        maquina.addWheel("normal",2);
 
         String[] configuracion = {"red", "purple"};
 

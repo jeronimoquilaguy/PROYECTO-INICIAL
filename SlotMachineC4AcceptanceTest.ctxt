@@ -1,0 +1,9 @@
+#BlueJ class context
+#Sun Oct 04 19:05:13 COT 2026
+comment0.target=SlotMachineC4AcceptanceTest
+comment0.text=\r\n Pruebas de aceptacion del Ciclo 4 de SlotMachine.\r\n
+comment1.target=void testRebelNoSePuedeEliminar()
+comment1.text=\r\n Comprueba que una rueda Rebel protege su posicion\r\n y no puede ser eliminada.\r\n
+comment2.target=void testLeftyCopiaLaRuedaIzquierda()
+comment2.text=\r\n Comprueba que una rueda Lefty copia el estado\r\n de la rueda que tiene a su izquierda.\r\n
+numComments=3

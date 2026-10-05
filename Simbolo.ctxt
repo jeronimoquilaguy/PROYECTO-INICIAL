@@ -1,0 +1,21 @@
+#BlueJ class context
+#Sun Oct 04 18:13:57 COT 2026
+comment0.target=Simbolo
+comment0.text=\r\n Representa un simbolo de la maquina tragamonedas.\r\n\r\n Los diferentes tipos de simbolos pueden tener\r\n comportamientos diferentes cuando son seleccionados.\r\n
+comment1.params=color
+comment1.target=Simbolo(java.lang.String)
+comment1.text=\r\n Crea un simbolo con un color.\r\n\r\n @param color color inicial del simbolo\r\n
+comment2.target=java.lang.String obtenerColor()
+comment2.text=\r\n Devuelve el color actual del simbolo.\r\n\r\n @return color del simbolo\r\n
+comment3.params=color
+comment3.target=void cambiarColor(java.lang.String)
+comment3.text=\r\n Cambia el color del simbolo.\r\n\r\n @param color nuevo color\r\n
+comment4.target=void seleccionado()
+comment4.text=\r\n Ejecuta el comportamiento del simbolo cuando\r\n es seleccionado.\r\n
+comment5.target=int obtenerTama\u00F1o()
+comment5.text=\r\n Devuelve el tama\u00F1o actual del simbolo.\r\n\r\n @return tama\u00F1o del simbolo\r\n
+comment6.target=boolean estaVisible()
+comment6.text=\r\n Indica si el simbolo esta visible.\r\n\r\n @return true si el simbolo es visible\r\n
+comment7.target=java.lang.String obtenerTipo()
+comment7.text=\r\n Devuelve el tipo de simbolo.\r\n\r\n @return tipo del simbolo\r\n
+numComments=8

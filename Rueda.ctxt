@@ -1,10 +1,18 @@
 #BlueJ class context
-#Sun Sep 06 20:55:09 COT 2026
+#Sun Oct 04 17:41:54 COT 2026
 comment0.target=Rueda
 comment0.text=\r\n Representa una rueda individual de la maquina tragamonedas.\r\n Cada rueda tiene un fondo (un Rectangle) y un simbolo (un Circle).\r\n\r\n Jeronimo Quilaguy - Juan Roa\r\n version 1\r\n
 comment1.params=color
 comment1.target=Rueda(java.lang.String)
 comment1.text=\r\n Crea una rueda nueva con un color inicial.\r\n @param color el color inicial del simbolo\r\n
+comment10.target=boolean puedeEliminar()
+comment10.text=\r\n Dice si la rueda puede eliminarse.\r\n\r\n @return true porque una rueda normal puede eliminarse\r\n
+comment11.params=tama\u00F1o
+comment11.target=void cambiarTama\u00F1o(int)
+comment11.text=\r\n Cambia el tama\u00F1o del simbolo.\r\n\r\n @param tama\u00F1o nuevo tama\u00F1o del simbolo\r\n
+comment12.params=visible
+comment12.target=void cambiarVisibilidad(boolean)
+comment12.text=\r\n Cambia la visibilidad del simbolo.\r\n\r\n @param visible indica si el simbolo debe ser visible\r\n
 comment2.params=x
 comment2.target=void moverA(int)
 comment2.text=\r\n Mueve la rueda hasta una posicion horizontal del lienzo.\r\n @param x la posicion en x a la que se debe mover la rueda\r\n
@@ -20,4 +28,8 @@ comment6.target=void hacerVisible()
 comment6.text=\r\n Hace visible la rueda en el lienzo.\r\n
 comment7.target=void hacerInvisible()
 comment7.text=\r\n Hace invisible la rueda en el lienzo.\r\n
-numComments=8
+comment8.target=boolean puedeBloquear()
+comment8.text=\r\n Dice si la rueda puede bloquearse.\r\n\r\n @return true porque una rueda normal puede bloquearse\r\n
+comment9.target=boolean puedeIntercambiar()
+comment9.text=\r\n Dice si la rueda puede intercambiarse.\r\n\r\n @return true porque una rueda normal puede intercambiarse\r\n
+numComments=13

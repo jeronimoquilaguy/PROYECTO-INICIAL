@@ -1,0 +1,10 @@
+#BlueJ class context
+#Sun Oct 04 17:44:01 COT 2026
+comment0.target=RuedaNormal
+comment0.text=\r\n Representa una rueda normal.\r\n
+comment1.params=color
+comment1.target=RuedaNormal(java.lang.String)
+comment1.text=\r\n Crea una rueda normal con un color.\r\n\r\n @param color color inicial de la rueda\r\n
+comment2.target=void mostrarTipo()
+comment2.text=\r\n Muestra visualmente que la rueda es normal.\r\n
+numComments=3

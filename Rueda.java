@@ -92,4 +92,53 @@ public class Rueda {
         simbolo.makeInvisible();
         fondo.makeInvisible();
     }
+    
+    /**
+     * Dice si la rueda puede bloquearse.
+     *
+     * @return true porque una rueda normal puede bloquearse
+     */
+    public boolean puedeBloquear() {
+        return true;
+    }
+
+    /**
+     * Dice si la rueda puede intercambiarse.
+     *
+     * @return true porque una rueda normal puede intercambiarse
+     */
+    public boolean puedeIntercambiar() {
+        return true;
+    }
+
+    /**
+     * Dice si la rueda puede eliminarse.
+     *
+     * @return true porque una rueda normal puede eliminarse
+     */
+    public boolean puedeEliminar() {
+        return true;
+    }
+
+    /**
+     * Cambia el tamaño del simbolo.
+     *
+     * @param tamaño nuevo tamaño del simbolo
+     */
+    public void cambiarTamaño(int tamaño) {
+        simbolo.changeSize(tamaño);
+    }
+
+    /**
+     * Cambia la visibilidad del simbolo.
+     *
+     * @param visible indica si el simbolo debe ser visible
+     */
+    public void cambiarVisibilidad(boolean visible) {
+        if (visible) {
+            simbolo.makeVisible();
+        } else {
+            simbolo.makeInvisible();
+        }
+    }
 }
