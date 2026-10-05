@@ -1,3 +1,4 @@
+Ciclo 1
 1.¿Cuáles fueron los mini-ciclos definidos? Justifíquenlos.
 Definimos tres mini-ciclos principales para aislar la complejidad:
 Mini-ciclo 1 (Lógica de estructuras): Implementación de las listas de ruedas y el catálogo de símbolos, junto con la regla de negocio de índices iniciando en 1.  
@@ -24,6 +25,7 @@ Barnes, D. J., & Kölling, M. (2000). Objects First with Java: A Practical Intro
 
 La más útil: La documentación oficial de Java (Oracle), específicamente para entender el comportamiento dinámico de los ArrayList y el manejo de estructuras condicionales para iterar sobre los objetos gráficos.
 
+Ciclo 3
 1. ¿Cuáles fueron los mini-ciclos definidos? Justifíquenlos.
 Definimos tres mini-ciclos principales para organizar el desarrollo de la extensión del proyecto y reducir la complejidad:
 
@@ -66,3 +68,37 @@ International Collegiate Programming Contest. (2025). ICPC World Finals 2025 –
 Barnes, D. J., & Kölling, M. (2000). Objects First with Java: A Practical Introduction using BlueJ.
 
 La referencia más útil para este ciclo fue el enunciado oficial del problema de Slot Machine, ya que permitió comprender las restricciones, las operaciones permitidas y el objetivo que debía cumplir el algoritmo. La documentación oficial de Java también fue útil para trabajar con ArrayList, arreglos y estructuras de control utilizadas durante la implementación.
+
+Ciclo 4
+1. ¿Cuáles fueron los mini-ciclos definidos? Justifíquenlos.
+Definimos tres mini-ciclos principales para organizar el desarrollo del Ciclo 4 y reducir la complejidad:
+Mini-ciclo 1 (Implementación de tipos de ruedas): Desarrollo de los diferentes tipos de ruedas requeridos, incluyendo Normal, Lefty y Rebel. Se implementaron sus comportamientos particulares, como la copia del estado de la rueda izquierda en Lefty y las restricciones de bloqueo, intercambio y eliminación en Rebel.
+Mini-ciclo 2 (Implementación de tipos de símbolos): Desarrollo de los diferentes tipos de símbolos, incluyendo Normal, Ephemeral, Shy y Lucky. Cada tipo cuenta con un comportamiento diferente al ser seleccionado, como disminuir su tamaño, cambiar su visibilidad o cambiar su estado.
+Mini-ciclo 3 (Integración y pruebas): Integración de los nuevos tipos con la clase SlotMachine y realización de pruebas unitarias, pruebas compartidas y pruebas de aceptación. También se verificó que las funcionalidades de los ciclos anteriores continuaran funcionando correctamente.
+Justificación: Separar estos mini-ciclos permitió implementar primero los nuevos tipos de ruedas y símbolos de manera independiente, después integrarlos con SlotMachine y finalmente comprobar que los nuevos comportamientos funcionaran sin afectar las funcionalidades existentes.
+
+2. ¿Cuál es el estado actual del proyecto en términos de mini-ciclos? ¿Por qué?
+El proyecto se encuentra con los tres mini-ciclos completados. La clase SlotMachine permite trabajar con diferentes tipos de ruedas y símbolos, cada uno con sus comportamientos correspondientes. Además, se implementaron pruebas para comprobar el funcionamiento de las nuevas funcionalidades y se conservaron las pruebas de los ciclos anteriores para verificar que no se afectara el comportamiento existente.
+
+3. ¿Cuál fue el tiempo total invertido por cada uno de ustedes? (Horas/Hombre)
+Jerónimo Quilaguy / 11 horas
+Juan Roa / 11 horas
+
+4. ¿Cuál consideran fue el mayor logro? ¿Por qué?
+Nuestro mayor logro fue implementar los diferentes tipos de ruedas y símbolos utilizando clases separadas y herencia. Esto permitió que cada elemento tuviera su propio comportamiento sin modificar completamente la lógica existente de SlotMachine. Además, logramos integrar estas nuevas funcionalidades manteniendo las operaciones de los ciclos anteriores y verificando su funcionamiento mediante pruebas.
+
+5. ¿Cuál consideran que fue el mayor problema técnico? ¿Qué hicieron para resolverlo?
+El mayor problema técnico fue integrar los nuevos comportamientos de ruedas y símbolos con la lógica que ya existía en SlotMachine, especialmente al momento de realizar giros y actualizar los símbolos. También fue necesario controlar correctamente comportamientos especiales como la copia de estado de las ruedas Lefty y los cambios de tamaño o visibilidad de los símbolos.
+Solución: Creamos clases independientes para los diferentes tipos de ruedas y símbolos y utilizamos métodos auxiliares en SlotMachine para actualizar sus estados y aplicar sus comportamientos. Posteriormente realizamos pruebas unitarias y de aceptación para comprobar que cada comportamiento funcionara correctamente y que las funcionalidades anteriores no se vieran afectadas.
+
+6. ¿Qué hicieron bien como equipo? ¿Qué se comprometen a hacer para mejorar los resultados?
+Trabajamos de manera conjunta en la comprensión de los nuevos requerimientos, la implementación de las clases y la realización de pruebas. También mantuvimos las pruebas de los ciclos anteriores para comprobar que las nuevas modificaciones no dañaran las funcionalidades que ya estaban implementadas.
+Para el próximo ciclo nos comprometemos a organizar desde el inicio las tareas y pruebas que se deben realizar, además de integrar las diferentes partes con mayor anticipación para contar con más tiempo para revisar y corregir errores antes de la entrega.
+
+7. Considerando las prácticas XP incluidas en los laboratorios, ¿cuál fue la más útil? ¿Por qué?
+La práctica de Programación en Parejas (Pair Programming) fue especialmente útil durante este ciclo. Trabajar conjuntamente permitió analizar los nuevos comportamientos, detectar errores en la integración de las clases y revisar rápidamente los resultados de las pruebas. También facilitó discutir las decisiones de diseño antes de realizar cambios en el código.
+
+8. ¿Qué referencias usaron? ¿Cuál fue la más útil? Incluyan citas con estándares adecuados.
+Oracle. (2026). Java Platform, Standard Edition Documentation. Recuperado de https://docs.oracle.com/en/java/
+Barnes, D. J., & Kölling, M. (2000). Objects First with Java: A Practical Introduction using BlueJ.
+La referencia más útil para este ciclo fue el enunciado del proyecto, ya que permitió comprender los requerimientos relacionados con los diferentes tipos de ruedas y símbolos, sus comportamientos y las pruebas que debían realizarse. La documentación de Java también fue útil para trabajar con clases, herencia, ArrayList y estructuras de control utilizadas durante la implementación.
